@@ -42,7 +42,7 @@ const Home = () => {
       animate="visible"
       exit="exit"
     >
-      <h2>Welcome to Mouth Melting Pizza</h2>
+      <h2>Welcome! to Mouth Melting Pizza</h2>
       <Link to="/base">
         <motion.button variants={buttonVariant} whileHover="hover">
           Create Your Pizza

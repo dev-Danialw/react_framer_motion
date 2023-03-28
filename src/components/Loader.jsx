@@ -33,6 +33,16 @@ const loaderVarient = {
   },
 };
 
+const buttonVariant = {
+  hover: {
+    color: "#f8e112",
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 const Loader = () => {
   const [animation, cycleAnimation] = useCycle("animationOne", "animationTwo");
   return (
@@ -42,7 +52,13 @@ const Loader = () => {
         variants={loaderVarient}
         animate={animation}
       ></motion.div>
-      <div onClick={() => cycleAnimation()}>Cycle Loader</div>
+      <motion.div
+        onClick={() => cycleAnimation()}
+        variants={buttonVariant}
+        whileHover="hover"
+      >
+        Cycle Loader
+      </motion.div>
     </>
   );
 };
